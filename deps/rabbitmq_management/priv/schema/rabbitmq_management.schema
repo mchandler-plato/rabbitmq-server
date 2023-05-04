@@ -521,3 +521,14 @@ end}.
     {datatype, {enum, [true, false]}},
     {include_default, false}
 ]}.
+
+%% ===========================================================================
+
+%% Display options
+%%
+
+{mapping, "management.display_name", "rabbitmq_management.display_name",
+    [{datatype, string}]}.
+
+{mapping, "management.header_bg_color", "rabbitmq_management.header_bg_color",
+    [{datatype, string}]}.

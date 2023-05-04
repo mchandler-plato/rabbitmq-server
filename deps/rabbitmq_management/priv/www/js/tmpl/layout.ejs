@@ -1,5 +1,9 @@
 <div id="header">
-  <ul id="topnav">
+  <ul id="topnav"
+  <% if(header_bg_color) { %>
+    style="background: <%= header_bg_color %>"
+  <% } %>  
+  >
     <li id="interval">
       <label for="update-every" id="status"></label>
       <select id="update-every">
@@ -30,6 +34,11 @@
   </ul>
   <div id="logo">
     <a href="#/"><img src="img/rabbitmqlogo.svg" alt="RabbitMQ logo" width="204" height="37"/></a>
+    <% if(display_name) { %>
+      <span id="displayname">
+        <abbr title="<%= display_name %>"><%= display_name %></abbr>
+      </span>
+    <% } %>
     <span id="versions"></span>
   </div>
   <div id="menu">

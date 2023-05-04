@@ -53,6 +53,8 @@ to_json(ReqData, Context = #context{user = User = #user{tags = Tags}}) ->
                  {disable_stats,                 rabbit_mgmt_util:disable_stats(ReqData)},
                  {is_op_policy_updating_enabled, not rabbit_mgmt_features:is_op_policy_updating_disabled()},
                  {enable_queue_totals,           rabbit_mgmt_util:enable_queue_totals(ReqData)}],
+                 {display_name,                  application:get_env(rabbitmq_management, display_name)},
+                 {header_bg_color,               application:get_env(rabbitmq_management, header_bg_color)},
     try
         case rabbit_mgmt_util:disable_stats(ReqData) of
             false ->

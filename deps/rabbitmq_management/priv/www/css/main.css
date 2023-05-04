@@ -363,3 +363,5 @@ div.bindings-wrapper p.arrow { font-size: 200%; }
 }
 
 table.dynamic-shovels td label {width: 200px; margin-right:10px;padding: 4px 0px 5px 0px}
+
+#displayname { margin-left: 10px }
